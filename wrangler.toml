@@ -1,0 +1,9 @@
+name = "mreedon-portfolio"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+destination = "dist"
+
+[env.production]
+vars = { NODE_ENV = "production" }
