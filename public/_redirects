@@ -1,2 +1,3 @@
-/guest/* https://osrs-flip-tracker-combined.pages.dev/:splat 200
+/guest https://osrs-flip-tracker-combined.pages.dev 302
+/guest/* https://osrs-flip-tracker-combined.pages.dev/:splat 302
 /* /index.html 200
