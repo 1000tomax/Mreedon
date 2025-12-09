@@ -117,4 +117,3 @@ export function ProjectCard({ project }: ProjectCardProps) {
     </article>
   );
 }
-
