@@ -8,11 +8,10 @@ export function Home() {
       <SEO />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-16 dark:bg-gray-950">
+      <section className="relative overflow-hidden pt-16">
         <div className="absolute inset-0 z-0">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-indigo-500 blur-[100px] opacity-20 dark:opacity-20" />
-          <div className="absolute top-20 -left-20 h-72 w-72 rounded-full bg-purple-500 blur-[100px] opacity-20 dark:opacity-20" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+          <div className="animate-pulse-glow absolute -top-40 -right-40 h-96 w-96 rounded-full bg-indigo-500/20 blur-[100px]" />
+          <div className="animate-pulse-glow animation-delay-400 absolute top-20 -left-20 h-72 w-72 rounded-full bg-purple-500/20 blur-[100px]" />
         </div>
 
         <div className="container-custom relative z-10">
@@ -21,7 +20,7 @@ export function Home() {
               Building Tools That <br />
               <span className="text-gradient">Make a Difference</span>
             </h1>
-            <p className="mx-auto mb-10 max-w-2xl animate-fade-in-up text-lg text-gray-600 animation-delay-200 dark:text-gray-300">
+            <p className="mx-auto mb-10 max-w-2xl animate-fade-in-up text-lg text-gray-600 animation-delay-200 dark:text-gray-400">
               Developer focused on creating practical applications for gaming analytics, financial
               planning, and productivity. Turning complex problems into elegant solutions.
             </p>
@@ -38,7 +37,7 @@ export function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-padding bg-gray-50 dark:bg-gray-900/50">
+      <section id="about" className="section-padding bg-gray-50/50 dark:bg-white/5">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
             <h2 className="heading-2 mb-6 text-center text-gray-900 dark:text-white">About</h2>
@@ -59,7 +58,7 @@ export function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="section-padding bg-white dark:bg-gray-950">
+      <section id="projects" className="section-padding">
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="heading-2 mb-4 text-gray-900 dark:text-white">Featured Projects</h2>
@@ -76,7 +75,7 @@ export function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-padding bg-gray-50 dark:bg-gray-900/50">
+      <section id="contact" className="section-padding bg-gray-50/50 dark:bg-white/5">
         <div className="container-custom">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="heading-2 mb-6 text-gray-900 dark:text-white">Get in Touch</h2>

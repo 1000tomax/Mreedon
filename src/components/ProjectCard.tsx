@@ -9,48 +9,49 @@ export function ProjectCard({ project }: ProjectCardProps) {
   // Generate a gradient based on the project ID to give each card a unique look
   const getGradient = (id: string) => {
     const gradients = [
-      'from-blue-400 to-indigo-500',
-      'from-emerald-400 to-cyan-500',
-      'from-orange-400 to-pink-500',
-      'from-purple-400 to-blue-500',
+      'from-blue-500 to-indigo-600',
+      'from-emerald-500 to-cyan-600',
+      'from-orange-500 to-pink-600',
+      'from-purple-500 to-blue-600',
     ];
     const index = parseInt(id) % gradients.length;
     return gradients[index];
   };
 
   return (
-    <article className="card group flex h-full flex-col overflow-hidden p-0 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+    <article className="card group flex h-full flex-col overflow-hidden border-0 p-0 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:shadow-none dark:hover:shadow-indigo-500/20">
       {/* Visual Placeholder / Header */}
       <div
-        className={`h-48 w-full bg-gradient-to-br ${getGradient(project.id)} relative overflow-hidden`}
+        className={`relative h-48 w-full overflow-hidden bg-gradient-to-br ${getGradient(project.id)}`}
       >
-        <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity group-hover:opacity-100" />
-        <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-          <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-800 dark:bg-black/50 dark:text-white">
+        <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+          <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white backdrop-blur-md">
             {project.category}
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col flex-grow p-6">
+      <div className="flex flex-grow flex-col p-6">
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="heading-3 text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          <h3 className="heading-3 text-gray-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400">
             {project.title}
           </h3>
           <span
             className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${
               project.status === 'active'
-                ? 'bg-green-50 text-green-700 ring-green-600/20 dark:bg-green-900/20 dark:text-green-400 dark:ring-green-500/20'
+                ? 'bg-green-50 text-green-700 ring-green-600/20 dark:bg-green-500/10 dark:text-green-400 dark:ring-green-500/20'
                 : project.status === 'development'
-                  ? 'bg-yellow-50 text-yellow-800 ring-yellow-600/20 dark:bg-yellow-900/20 dark:text-yellow-400 dark:ring-yellow-500/20'
-                  : 'bg-gray-50 text-gray-600 ring-gray-500/10 dark:bg-gray-900/20 dark:text-gray-400 dark:ring-gray-400/20'
+                  ? 'bg-yellow-50 text-yellow-800 ring-yellow-600/20 dark:bg-yellow-500/10 dark:text-yellow-400 dark:ring-yellow-500/20'
+                  : 'bg-gray-50 text-gray-600 ring-gray-500/10 dark:bg-gray-500/10 dark:text-gray-400 dark:ring-gray-400/20'
             }`}
           >
             {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
           </span>
         </div>
 
-        <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+        <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-600 dark:text-gray-400">
           {project.description}
         </p>
 
@@ -58,19 +59,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.slice(0, 3).map((tech) => (
             <span
               key={tech}
-              className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700"
+              className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-white/5 dark:text-gray-300 dark:ring-white/10"
             >
               {tech}
             </span>
           ))}
           {project.technologies.length > 3 && (
-            <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-700">
+            <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-white/5 dark:text-gray-300 dark:ring-white/10">
               +{project.technologies.length - 3}
             </span>
           )}
         </div>
 
-        <div className="mt-auto flex items-center gap-4 border-t border-gray-100 pt-4 dark:border-gray-800">
+        <div className="mt-auto flex items-center gap-4 border-t border-gray-100 pt-4 dark:border-white/10">
           <Link
             to={`/projects/${project.slug}`}
             className="flex items-center text-sm font-semibold text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
@@ -116,3 +117,4 @@ export function ProjectCard({ project }: ProjectCardProps) {
     </article>
   );
 }
+
