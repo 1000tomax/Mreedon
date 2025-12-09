@@ -5,7 +5,8 @@ export const projects: Project[] = [
     id: '1',
     slug: 'osrs-flip-tracker',
     title: 'OSRS Flip Tracker',
-    description: 'Data analysis tool for Old School RuneScape flipping with integrated flipping copilot plugin.',
+    description:
+      'Data analysis tool for Old School RuneScape flipping with integrated flipping copilot plugin.',
     longDescription:
       'A comprehensive data analysis tool designed for Old School RuneScape players interested in item flipping. Features real-time market data analysis, profit tracking, and an integrated flipping copilot plugin that provides intelligent suggestions for maximizing profits in the Grand Exchange.',
     url: 'https://mreedon.com/guest',

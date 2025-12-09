@@ -20,8 +20,8 @@ export function ProjectDetail() {
 
       {/* Header Background */}
       <div className="absolute top-0 left-0 right-0 -z-10 h-[500px] overflow-hidden">
-         <div className="absolute top-0 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-500/10 blur-[100px]" />
-         <div className="absolute top-0 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/10 blur-[100px]" />
+        <div className="absolute top-0 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/2 rounded-full bg-indigo-500/10 blur-[100px]" />
+        <div className="absolute top-0 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/10 blur-[100px]" />
       </div>
 
       <article className="pt-24 pb-20 sm:pt-32 sm:pb-24">
@@ -30,13 +30,19 @@ export function ProjectDetail() {
           <nav className="mb-8 animate-fade-in-up">
             <ol className="flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400">
               <li>
-                <Link to="/" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                <Link
+                  to="/"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link to="/#projects" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                <Link
+                  to="/#projects"
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                >
                   Projects
                 </Link>
               </li>
@@ -64,9 +70,9 @@ export function ProjectDetail() {
               </span>
             </div>
             <h1 className="heading-1 mb-6 text-gray-900 dark:text-white">
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-indigo-800 to-gray-900 dark:from-white dark:via-indigo-200 dark:to-white">
-                 {project.title}
-               </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-indigo-800 to-gray-900 dark:from-white dark:via-indigo-200 dark:to-white">
+                {project.title}
+              </span>
             </h1>
             <p className="max-w-3xl text-xl leading-relaxed text-gray-600 dark:text-gray-300">
               {project.longDescription}
@@ -82,9 +88,12 @@ export function ProjectDetail() {
                 <h2 className="heading-2 mb-8 text-gray-900 dark:text-white">Key Features</h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {project.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50/50 p-4 transition-colors hover:bg-gray-50 dark:border-gray-800 dark:bg-gray-900/50 dark:hover:bg-gray-900">
+                    <div
+                      key={feature}
+                      className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50/50 p-4 transition-colors hover:bg-gray-50 dark:border-gray-800 dark:bg-gray-900/50 dark:hover:bg-gray-900"
+                    >
                       <div className="flex-shrink-0 rounded-full bg-indigo-100 p-1 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400">
-                         <svg
+                        <svg
                           className="h-4 w-4"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -98,7 +107,9 @@ export function ProjectDetail() {
                           />
                         </svg>
                       </div>
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{feature}</span>
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -110,7 +121,9 @@ export function ProjectDetail() {
               <div className="card sticky top-24">
                 {/* Technologies */}
                 <div className="mb-8">
-                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Technologies</h3>
+                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">
+                    Technologies
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
