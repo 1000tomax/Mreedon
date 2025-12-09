@@ -16,8 +16,7 @@
   }
 
   .bg-radial-gradient {
-    background: radial-gradient(ellipse at top, var(--tw-gradient-stops));
-    @apply from-indigo-950/30 via-[#0a0a0a] to-[#0a0a0a];
+    background: radial-gradient(circle at 50% 0%, rgba(49, 46, 129, 0.4) 0%, rgba(10, 10, 10, 1) 70%);
   }
 
   /* Noise overlay */

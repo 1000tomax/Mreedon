@@ -8,8 +8,8 @@ export function Home() {
       <SEO />
 
       {/* Fixed Background Gradients */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-radial-gradient opacity-0 dark:opacity-100 transition-opacity duration-500" />
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-radial-gradient" />
       </div>
 
       {/* Hero Section */}
