@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
   social: [
     {
       platform: 'GitHub',
-      url: 'https://github.com/mreedon',
+      url: 'https://github.com/1000tomax',
     },
   ],
 };

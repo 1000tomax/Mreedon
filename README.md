@@ -1,6 +1,7 @@
 # Mreedon Portfolio
 
-A modern portfolio website built with React, TypeScript, and TailwindCSS.
+A personal developer portfolio built with React, TypeScript, and Vite.
+
 
 ## Tech Stack
 

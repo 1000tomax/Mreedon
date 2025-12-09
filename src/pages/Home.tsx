@@ -8,17 +8,24 @@ export function Home() {
       <SEO />
 
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <div className="container-custom">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="heading-1 mb-6 text-gray-900 dark:text-white">
-              Building Tools That Make a Difference
+      <section className="relative overflow-hidden bg-white pt-16 dark:bg-gray-950">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-indigo-500 blur-[100px] opacity-20 dark:opacity-20" />
+          <div className="absolute top-20 -left-20 h-72 w-72 rounded-full bg-purple-500 blur-[100px] opacity-20 dark:opacity-20" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        </div>
+
+        <div className="container-custom relative z-10">
+          <div className="mx-auto max-w-4xl py-24 text-center sm:py-32">
+            <h1 className="heading-1 mb-6 animate-fade-in-up text-gray-900 dark:text-white">
+              Building Tools That <br />
+              <span className="text-gradient">Make a Difference</span>
             </h1>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mx-auto mb-10 max-w-2xl animate-fade-in-up text-lg text-gray-600 animation-delay-200 dark:text-gray-300">
               Developer focused on creating practical applications for gaming analytics, financial
               planning, and productivity. Turning complex problems into elegant solutions.
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="flex animate-fade-in-up flex-col justify-center gap-4 animation-delay-400 sm:flex-row">
               <a href="#projects" className="btn-primary">
                 View Projects
               </a>
@@ -31,17 +38,17 @@ export function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-padding">
+      <section id="about" className="section-padding bg-gray-50 dark:bg-gray-900/50">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
             <h2 className="heading-2 mb-6 text-center text-gray-900 dark:text-white">About</h2>
-            <div className="prose prose-gray mx-auto dark:prose-invert">
-              <p className="text-gray-600 dark:text-gray-300">
+            <div className="prose prose-lg prose-indigo mx-auto text-gray-600 dark:text-gray-300">
+              <p className="mb-4">
                 I'm a developer passionate about building tools that solve real problems. My
                 projects span from gaming analytics tools for Old School RuneScape to financial
                 planning calculators for retirement savings.
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p>
                 I focus on creating applications that are not only functional but also intuitive and
                 enjoyable to use. Each project is built with attention to detail, performance, and
                 user experience.
@@ -52,10 +59,15 @@ export function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="section-padding bg-gray-50 dark:bg-gray-800/50">
+      <section id="projects" className="section-padding bg-white dark:bg-gray-950">
         <div className="container-custom">
-          <h2 className="heading-2 mb-12 text-center text-gray-900 dark:text-white">Projects</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-12 text-center">
+            <h2 className="heading-2 mb-4 text-gray-900 dark:text-white">Featured Projects</h2>
+            <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
+              A collection of applications and tools I've built to solve specific challenges.
+            </p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -64,7 +76,7 @@ export function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-padding">
+      <section id="contact" className="section-padding bg-gray-50 dark:bg-gray-900/50">
         <div className="container-custom">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="heading-2 mb-6 text-gray-900 dark:text-white">Get in Touch</h2>
@@ -79,7 +91,7 @@ export function Home() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-primary w-full sm:w-auto"
                 >
                   Connect on {link.platform}
                 </a>
