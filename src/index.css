@@ -13,8 +13,11 @@
   body {
     @apply min-h-screen bg-gray-50 text-gray-900 antialiased selection:bg-indigo-500 selection:text-white;
     @apply dark:bg-[#0a0a0a] dark:text-gray-100;
-    /* Dark mode subtle ambient gradient */
-    @apply dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-indigo-950/20 dark:via-[#0a0a0a] dark:to-[#0a0a0a];
+  }
+
+  .bg-radial-gradient {
+    background: radial-gradient(ellipse at top, var(--tw-gradient-stops));
+    @apply from-indigo-950/30 via-[#0a0a0a] to-[#0a0a0a];
   }
 
   /* Noise overlay */
